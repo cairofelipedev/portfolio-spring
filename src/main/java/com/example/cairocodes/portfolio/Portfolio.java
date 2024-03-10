@@ -11,20 +11,17 @@ public class Portfolio {
   private Long id;
 
   private String name;
-  private String description; // Adicione este campo
+  private String description;
 
   // Construtores, getters e setters
 
   public Portfolio() {
-    // Construtor vazio necessário para JPA
   }
 
   public Portfolio(String name, String description) {
     this.name = name;
     this.description = description;
   }
-
-  // Getters e setters para 'name' e 'description'
 
   public String getName() {
     return name;
@@ -42,8 +39,8 @@ public class Portfolio {
     this.description = description;
   }
 
-public Portfolio(PortfolioRequest data) {
-  this.name = data.name();
-this.description = data.description();
-}
+  public Portfolio(PortfolioRequest data) {
+    this.name = data.name();
+    this.description = data.description();
+  }
 }
