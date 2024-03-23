@@ -30,7 +30,7 @@ public class PortfolioController {
 
     @PostMapping
     public ResponseEntity<String> saveFood(@RequestBody PortfolioRequest data) {
-        Portfolio portfolioData = new Portfolio(data.name(), data.description());
+        Portfolio portfolioData = new Portfolio(data.name(), data.description(), data.domain());
         repository.save(portfolioData);
 
         // HTTP 201 (CREATED)
